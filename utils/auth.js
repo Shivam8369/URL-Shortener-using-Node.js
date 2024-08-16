@@ -1,3 +1,5 @@
+// using session based authentication=> stateful 
+
 const sessionIdToUserMap = new Map();
 
 function setUser(id, user) {
