@@ -14,37 +14,52 @@ Password Encryption: User passwords are securely hashed using bcrypt.
 
 ## Backend
 Node.js: 
+
 Express: 
+
 MongoDB: 
+
 Mongoose:
+
 
 ## Authentication & Security
 bcrypt: 
+
 jsonwebtoken (JWT):
+
 uuid:
 
 ## Middleware
 cookie-parser:
+
 nodemon: 
+
 
 ## Frontend
 EJS:
+
 HTML:
+
 CSS:
 
 
 # Steps tp start the project 
 
 1. Clone the repository:
-git clone https://github.com/your-username/url-shortener-app.git
+   
+   git clone https://github.com/your-username/url-shortener-app.git
 
 2. Navigate to the project directory:
-cd url-shortener-app
+   
+   cd url-shortener-app
 
 3. Install dependencies:
-npm install
+
+   npm install
 
 4. Start the development server:
-npm run dev
 
-The application will start on http://localhost:8001.
+   npm run dev
+
+The application will start on
+http://localhost:8001.
