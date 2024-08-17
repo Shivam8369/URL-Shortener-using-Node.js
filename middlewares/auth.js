@@ -17,7 +17,19 @@ async function restrictToLoggedInUserOnly(req, res, next) {
   next();
 }
 
+function isAdmin (req,res,next){
+  console.log(req.user);
+  const role = req.user.role;
+
+  // console.log(role);
+  if(role !== "ADMIN"){
+    return res.end("You are UnAuthorized");
+  }
+  next();
+}
+
 
 module.exports = {
     restrictToLoggedInUserOnly,
+    isAdmin
   };
