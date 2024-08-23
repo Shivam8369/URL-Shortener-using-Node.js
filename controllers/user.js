@@ -29,7 +29,7 @@ async function handleLogin(req,res) {
     // const data = await User.findOne({email,password});
     console.log(user);
     // COMPARING PASSWORD 
-    if(await bcrypt.compare(password,user.password)){
+    if(await bcrypt.compare(password,user?.password)){
         const token = setToken(user);
         res.cookie("uid", token);
         return res.redirect('/'); 

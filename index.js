@@ -6,11 +6,13 @@ const { connectToDB } = require('./config/connectDB');
 const staticRouter = require('./routes/staticRouter');
 const userRoutes = require('./routes/user');
 const {restrictToLoggedInUserOnly} = require('./middlewares/auth');
+require('dotenv').config()
 
 const app = express();
-const PORT = 8001;
-
-connectToDB("mongodb://localhost:27017/url-shorter")
+const PORT = process.env.PORT || 8000;
+const db_url = process.env.MONGO_URL || 'mongodb://localhost:27017/url-shorter' ;
+  
+connectToDB(db_url)
 .then(()=> console.log("connected to DB"))
 .catch(()=> console.log("Failed to connect"));
 
