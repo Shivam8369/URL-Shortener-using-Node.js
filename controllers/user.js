@@ -28,6 +28,7 @@ async function handleLogin(req,res) {
     const user = await User.findOne({email});
     // const data = await User.findOne({email,password});
     console.log(user);
+    if(!user) return res.render('login', {error : "Invalid email or Password"});
     // COMPARING PASSWORD 
     if(await bcrypt.compare(password,user?.password)){
         const token = setToken(user);

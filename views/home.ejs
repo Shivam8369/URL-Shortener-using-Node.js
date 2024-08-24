@@ -72,7 +72,9 @@
     </form>
 
     <% if (locals.id) { %>
-        <p>URL is <%= locals.domains %>/url/<%= locals.id %> </p>
+        <a href="<%= locals.domains %>/url/<%= id %>">
+            <p>URL is <%= locals.domains %>/url/<%= id %></p>
+        </a>
     <% } %>
       
 </body>

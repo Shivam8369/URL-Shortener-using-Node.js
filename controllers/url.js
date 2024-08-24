@@ -14,7 +14,10 @@ async function GenerateShortURL(req, res) {
     redirectURL: body.url,
     visitedHistory: [],
   });
-  return res.render("home", {id: generatedId});
+
+  const domain = 'https://url-shortener-0vhl.onrender.com';
+  // const domain = 'http://localhost:8001'
+  return res.render("home", {id: generatedId, domains: domain});
   // return res.json({ id: generatedId });
 }
 
