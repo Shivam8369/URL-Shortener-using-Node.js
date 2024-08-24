@@ -7,7 +7,7 @@ const router = express.Router();
 const {getAllData} = require('../controllers/url');
 
 router.get('/',(req,res)=>{
-    const domain = 'https://url-shortener-0vhl.onrender.com/';
+    const domain = 'https://url-shortener-0vhl.onrender.com';
     return res.render('home',{domains: domain});
 })
 
