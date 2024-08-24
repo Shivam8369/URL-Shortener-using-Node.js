@@ -63,7 +63,7 @@
 <body>
     <h1>URL Shortener APP</h1>
     
-    <a href="http://localhost:8001/analytics"><button>Show Analytics</button></a>
+    <a href="<%= locals.domains %>/analytics"><button>Show Analytics</button></a>
 
     <form method="POST" action="/url">
         <label for="url">Enter URL</label>
@@ -72,7 +72,7 @@
     </form>
 
     <% if (locals.id) { %>
-        <p>URL is http://localhost:8001/url/<%= locals.id %> </p>
+        <p>URL is <%= locals.domains %>/url/<%= locals.id %> </p>
     <% } %>
       
 </body>
